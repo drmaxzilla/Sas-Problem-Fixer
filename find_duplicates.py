@@ -57,6 +57,6 @@ def trim_first_spaces(given_list):
 
 
 if __name__ == '__main__':
-    find_problems("This,is, a, demo")
+    find_problems()
 
 
