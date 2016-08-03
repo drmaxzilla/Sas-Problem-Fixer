@@ -41,6 +41,6 @@ def find_problems(given_list = ["12345678a", "12345678b", "12345678c", "abcdefgh
     return matching_strings
 
 if __name__ == '__main__':
-    find_problems("This,is,a,demo")
+    find_problems()
 
 
