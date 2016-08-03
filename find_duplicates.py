@@ -14,6 +14,8 @@ def find_problems(given_list = ["12345678a", "12345678b", "12345678c", "abcdefgh
         else:
             given_list= given_list.split()
 
+    trim_first_spaces(given_list)
+
     #Populate a list of keys
     keys = []
     for curr in given_list:
@@ -40,7 +42,21 @@ def find_problems(given_list = ["12345678a", "12345678b", "12345678c", "abcdefgh
         print matching_strings.__str__()
     return matching_strings
 
+
+def trim_first_spaces(given_list):
+    """
+    Fixes case in which the infile was delimited with commas, but had a starting space
+    :param given_list: List supplied
+    :return: List without leading spaces
+    """
+    p = 0
+    for current_item in given_list:
+        if given_list[p].startswith(" "):
+            given_list[p] = given_list[p][1:]
+        p += 1
+
+
 if __name__ == '__main__':
-    find_problems()
+    find_problems("This,is, a, demo")
 
 
